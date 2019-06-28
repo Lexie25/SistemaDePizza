@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <table th:each= "pizza : ${pizzas}" >
+            <h3 th:text= "${pizza.sabor}"></h3>
+            <tr>
+                <td align="center" width="100"><h4>Massa:</h4></td>
+                <td><p th:text= "${pizza.massa}">     
+                </p></td>
+            </tr>
+<tr>
+        <td align="center" width="100"><h4>Borda:</h4></td>
+        <td><p th:text= "${pizza.tipoDeBorda}">     
+        </p></td>
+</tr>
+<tr>
+        <td align="center" width="100"><h4>Valor:</h4></td>
+        <td><p th:text= "${pizza.valor}">     
+        </p></td>
+</tr>
+        </table>
+    </div>
+    
+</body>
+</html>
